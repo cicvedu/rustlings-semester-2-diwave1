@@ -11,7 +11,6 @@ fn main() {
         .unwrap()
         .as_secs(); // What's the use of this timestamp here?
 
-    std::env::set_var("TEST_FOO", timestamp.to_string());
     let your_command = format!(
         "rustc-env=TEST_FOO={}",
         timestamp
